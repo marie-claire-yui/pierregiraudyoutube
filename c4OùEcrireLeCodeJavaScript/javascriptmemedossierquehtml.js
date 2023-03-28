@@ -1,0 +1,1 @@
+alert("ceci est du javascript d'un fichier séparé et dans le même dossier que html");

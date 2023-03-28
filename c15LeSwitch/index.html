@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- instruction qui peut tester que les valeurs d'égalité
+    test que l'égalité de valeur 
+    on peut le préférer dans ce cas à un if else if else
+    code + concis à écrire avec els cases-->
+    <script>
+        var heure = 10 ;
+        switch(heure){ // variable heure = variable test
+            case 8 : // peut prendre qu'une seule valeur
+                alert("il est 8h");
+                break; // instruction qui sert à ne pas lire les case suivant, sortir du switch, sinon le switch lit les case suivant
+            case 9 :
+                alert("il est 9h");
+                break;
+            case 10 : // peut prendre qu'une seule valeur
+                alert("il est 10h");
+                break; // instruction qui sert à ne pas lire les case suivant
+            case 11 :
+                alert("il est 11h");
+                break;
+            default:
+                alert("Rien à afficher pour cette valeur");
+                // pas de break pour le default
+            }
+
+           // if (heure === 8){alert("il est 8h")} eq du case 8
+
+    </script>
+</body>
+</html>

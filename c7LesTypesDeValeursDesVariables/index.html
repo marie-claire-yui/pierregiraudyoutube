@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les variables en JavaScript</title>
+</head>
+<body>
+    <h1>Les variables en JavaScript</h1>
+    <script>
+        //les nombres
+        var x = 25; // nombre positif
+        var y = -75; // nombre négatif
+        var z = 3.14 // nombre décimaux
+
+        // les chaines de caractères , string
+        var prenom = "pierre"; // double quote ou guillemets
+        var nom = 'giraud'; // simple quote ou apostrophe
+        var sexe = "Je suis un homme";
+        var xprime = "25"; // ceci aussi est un string
+
+        // échappement "" '' \
+        var dpt = "Je vis dans le \"83\"";
+        var ville = 'J\'habite à Toulon';
+
+        var dpt2= 'Je vis dans le "83"';
+        var ville2 = "J'habite à Toulon";
+
+        // booléen valeur true or false, utilisé pour des tests
+        var a = true, b = false; //booléen
+        var c ="true"; // chaine de caractère pas booléen
+
+        // valeur null, valeur undefined, valeur NaN
+        var n = null;
+        var u = undefined;
+        var nn = NaN;
+
+        // écrasement de valeur
+        x= "quatre"; // dernière valeur connue de x, la nombre 25 a été écrasé
+
+        //typeof (faire attention car contestable)
+        alert("Variable x :" + typeof(x) +
+        "\nVariable y :" + typeof(y) +  // le \n permet un retour chariot ou retour à la ligne comme br en html
+        "\nVariable a :" + typeof(a) +  // le + permet de concaténer
+        "\nVariable n :" + typeof(n) + // renvoit object
+        "\nVariable u : " + typeof(u) +
+        "\nVariable nn : " + typeof(nn)); // renvoit number alors que c'est un NaN
+        // boite qui sera créer par alert()
+
+
+    </script>
+</body>
+</html>

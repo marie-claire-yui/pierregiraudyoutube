@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Structures ternaires</title>
+</head>
+<body>
+    <h1>Structures ternaires</h1>
+    <script>
+        var heure= 19, bon = "";
+
+        bon = (heure <=18) ? "Bonjour" : "Bonsoir";
+        // test s'effectue sur la variable heure
+        // stockage dans la variable bon
+        // si test renvoit true on va stocker "bonjour"
+        // si test renvoit false on va stocker "bonsoir"
+        alert(bon); // bonsoir
+
+
+        // commenter le code quand on utilise un long ternaire
+        // gain de temps et de propreté du code
+
+        // équivalent avec les if
+        if (heure <=18){
+         bon = "Bonjour";
+        }
+        else
+        {
+         bon = "Bonsoir";
+        }
+        alert(bon);
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        alert('Ceci est affiché en JavaScript du head');
+    </script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="javascriptmemedossierquehtml.js"></script>
+    <title>Où écrire le JavaScript</title>
+</head>
+<body>
+    <h1>On peut écrire le JavaScript dans...</h1>
+    <ul>
+        <li>L'élement head d'un fichier HTML (à la fin du head de préférence)</li>
+         <li>L'élement body d'un fichier HTML</li>
+         <li>Un fichier .js séparén même code javaa scirpt liable à plusieurs sciprt HTML, meilleure solution</li>
+         <p>il peut y avoir plusieurs script dans le script HTML, ceci seront lu dans l'ordre linéairement. Pour des raisons de performances il est préférable de tout écrire dansle même 'script'</p>
+    </ul>
+    <script>
+        alert('Ceci est affiché en JavaScript du body');
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonctions</title>
+</head>
+<body>
+    <h1>Fonctions</h1>
+    <script>
+        //déclaration de fonction à 2 paramètres
+        function multiplication(x,y){
+                alert(x*y); // fonction native dans une fonction
+        } 
+        // appel de la fonction
+        multiplication(5,10); // on passe les arguments 5 et 10 respectivement
+        multiplication(-4,60); // on peut appeler la fonction autant de fois qu'on veut
+
+        // rq: x et y sont des paramètres et 5,10,-4,60 sont des arguments
+
+        function multiplication(a,b){
+            return a*b; // fonction native dans une fonction
+            // l'instruction return met fin à l'execution d'une fonction
+            // toutes les opérations qui suivent un return sont ignorés
+            // il faut donc écrire toutes les instructions avant le return
+            alert("ce message ne sera jamais affiché");
+        } 
+        //capture du résultat retourner par return dans une variable
+        var resultats1 = multiplication(5,10); 
+        var resultats2 = multiplication(-4,60);
+
+        resultats1 +=2;
+        alert(resultats1);
+
+    </script>
+</body>
+</html>

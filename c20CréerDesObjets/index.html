@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créer des objets</title>
+</head>
+<body>
+    <h1>Créer des objets</h1>
+    <script>
+        // méthode 1
+        // syntaxe new String / constructeur natif / fonction constructeur string
+        var obj_string = new String("Je suis un objet"); // déconseillé
+            // l'objet natif string contient des propriétés et des méthodes
+            obj_string.length ; // pour accéder à la propriété de l'objet string
+
+        // syntaxe new Object / fonction constructeur object
+        var obj_cree = new Object(); // création d'un objet grace à la fonction constructeur Object();
+            // définir des propriétés et de méthodes pour l'objet  " . "
+            // on défini des valeurs pour nos propriétés  
+            obj_cree.prenom = "Pierre"; // on lie la valeur Pierre à la propriété prénom
+            obj_cree.nom = "Giraud"; // on lie la valeur Giraud à la propriété prénom
+            obj_cree.age = 25; // on lie la valeur 25 à la propriété âge
+            // pour afficher les valeurs des propriétés
+            alert(obj_cree.prenom);
+
+        // méthode 2
+        // création d'objet littéral (la + simple)
+        var moi = {
+            prenom: "Pierre",
+            nom: "Giraud",
+            age: 25,
+
+            id: function(){
+                return this.prenom + ' ' + this.nom; // la valeur associée à la propriété prénom de l'objet courant moi
+                                                    // la valeur relative à la propriété nom de l'objet courant moi
+            }
+        };
+
+        alert(moi.id()); // on alerte la méthode id() de l'objet moi 
+
+
+        // méthode 3
+        // créer les objets à partir d'un constructeur
+        // on créé d'abord la fonction constructeur puis les objets à partir de cette fonction constructeur
+        // notre constructeur contient lui même des méthodes et des propriétés
+        // les objets construits à partir de celui-ci vont hérités de ses méthodes et de ses propriétés
+        // méthode utilisé pour des gros projets avec beaucoup d'objets similaires
+        function Identite(p,n,a){ // construction d'un constructeur qui contient 3 propriétés
+            this.prenom = p; // this fait référence aux objets sur laquelle on va travailler par la suite
+            this.nom = n; // ce qui permet d'accéder aux valeurs qui vont petre liés aux propriétés
+            this.age = a;
+        } 
+
+        // création de notre premier objet pierre qu'on lie à la fonction identité
+        var pierre = new Identite("Pierre","Giraud",25); 
+        // on passe les valeurs pierre, giraud, 25 qui vont remplacer le p, n, et ,a
+        // pour accéder aux propriétés
+        alert(pierre.prenom); // d'où l'utilité du mot clé this
+        // création d'une deuxième variable objet victor
+        var victor = new Identite("Victor","Durand",24);
+
+        alert('Age de Pierre: ' + pierre.age +
+        '\nAge de Victor : ' + victor.age);
+
+// l'identité des objets
+// au contraire des valeurs primitives on y accède par référence et non pas par valeur
+// on ne peut donc ni comparer ni copier un objet car non sens
+        var x = 10;
+        var y = x ;
+        y += 10;
+        // création de copie possible des variables x et y sans que cela impacte la variable originale
+        alert('Valeur de x : '+ x + //10
+        '\nValeur de y : ' + y ); //20
+        // avec les objets, on ne peut pas créer directement de copie d'un objet
+        //on créé une autre référence qui va pointer vers le même objet (car on accède aux objets par référence)
+        // si on modifie l'une des valeurs d'une des références on va modifier celles des autres références et tout va être modifier d'un coup
+        var joseph = pierre;
+       joseph.prenom ="efhzoi"; // la valeur relative à la propriété prénom de pierre va également être modifié car on accède aux objets par référence
+        // ici on créé une deuxième référence du même objet
+        // lorsqu'on modifie une référence de l'objet on modifie toutes les références de l'objet
+        alert("Prénom de Pierre: " + pierre.prenom +  //fhzoi
+            "\nPrénom de Joseph: " + joseph.prenom ); //fhzoi
+// joseph est une autre référence qui pointe vers le même objet
+// lorsqu'on modifie  cette référence on modifie toutes les références du même objet
+// faire attention aux duplications d'objets en JS
+
+
+    </script>
+</body>
+</html>

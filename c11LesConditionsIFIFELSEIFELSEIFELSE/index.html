@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Structure Conditionnelle</title>
+</head>
+<body>
+    <h1>Structure Conditionnelle</h1>
+    <script>
+        // condition if
+        var heure = 15;
+        if (heure <=18 == true){ // comparaison de 15 à 18 qui va donner un false ou true et on compare à true e
+            alert("Bonjour"); // on execute l'instruction si notre test est vérifié
+        }
+        if (heure <=18 == false){ // comparaison de 15 à 18 qui va donner un false ou true, on compare à true si true
+            alert("Bonjour"); // on execute l'instruction si notre test est vérifié
+        }       
+
+        // condition if else
+        var hour = 21;
+
+        if(hour <=18 == true){
+            alert("Bonjour");
+        }
+        else {
+            alert("Bonsoir");
+        }
+
+        // conditon if... else if... else
+        var ji = 9;
+        if(ji <12 == true){ // test effectué
+            alert("C'est le matin");
+        }
+        else if(ji == 12 == true){ // test effectué
+            alert("il est midi");
+        }
+        else if (ji <= 18 == true){ // test effectué
+            alert("c'est l'après midi");
+        }
+        else{ // jamais de test effetué
+            alert("c'est le soir"); 
+        }
+        // rq le code est lu linéairement, ici pour ji = 9, on sort de la boucle à ji < 12
+        // on rentre aussi dans le cas de ji <= 18, mais on est déjà sorti de la condition dès que le test est satisfait
+        // D'où faire attention à l'ordre!
+
+        // if imbriqué
+        var ji = "yo";
+
+        if (typeof(ji) == "number" == true){
+                    if(ji <12 == true){ // test effectué
+                         alert("C'est le matin");
+                     }
+                    else if(ji == 12 == true){ // test effectué
+                         alert("il est midi");
+                     }
+                    else if (ji <= 18 == true){ // test effectué
+                         alert("c'est l'après midi");
+                        }
+                     else{ // jamais de test effetué
+                        alert("c'est le soir"); 
+                        }
+        }
+        else 
+        {
+            alert("Mauvais type de valeur");
+        }
+    </script>
+</body>
+</html>

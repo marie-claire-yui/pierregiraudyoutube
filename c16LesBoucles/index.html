@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- permet d'éxétuer le code un certains nombre de fois tant qu'une condition n'aura pas été rempli
+    permet de gagner du temps en automatisant du 
+    attention il faut que la condition soit atteinte (doit être fausse) au bout d'un moment sinon on rentre dans une boucle infini -->
+<script>
+    // boucle while
+    var a = 0;
+    while (a<10){
+        alert('x contient la valeur:' + a);
+        a++; 
+        // à la valeur 10 on sort de la boucle 
+    } // rq: si la condition est fausse dès le départ la boucle ne sera jamais executé (aucun passage dans la boucle, car le test est réalisé avant le passage dans la boucle)
+
+    // subtilité d'incrémentation/décrementation et priorité sur type d'opérations
+    var x = 0, xprime = 0, alpha = 10, alphaprime = 10;
+
+    var y= x++; // on stocke d'abord la valeur de x dans la variable y puis on incrémente / affectation prioritaire sur l'incrémentation
+    var beta = alpha --; //beta stocke la valeur d'alpha puis décrémentation de la valeur d'alpha
+
+    var yprime = ++xprime; // l'incrémentation est prioritaire sur l'affectation
+    var betaprime = -- alphaprime; // la décrementation est prioritaire sur l'affectation
+
+    alert('y : '+ y +                   // renvoit:0
+    '\nx:' + x +                        // renvoit :1
+    '\nbeta:' + beta +                  // renvoit : 10
+    "\nalpha :" + alpha +               // renvoit : 9
+    "\nyprime: " + yprime +             // renvoit : 1
+    '\nxprime:' + xprime +              // renvoit : 1
+    "\nbetaprime :" + betaprime +       // renvoit : 9
+    "\nalphaprime: " + alphaprime       // renvoit : 9
+    );
+
+    // boucle do while (faire tant que)
+    // contrairement à la boucle while ici le test va être réalisé en fin de boucle
+    // on peut faire un premier tour de boucle do while avant même de tester donc même si la condition est fausse dès le départ
+    var b = 0;
+
+    do{
+        alert('b vaut : ' + b);
+        b--;
+    }
+    while(b>10);
+    // renvoit la valeur donnée par le premier passage de boucle puis on sort de la boucle (ne donne pas les autres valeurs)
+
+    //boucle for
+    // déclaration de la variable puis initialisation de la variable, condition, puis incrémentation ou décrementation
+    var i = ""
+    for (i=0; i<10; i++){ // initialisation ; test ; incrémentation (possible d'effectuer en dehors du for mais cette syntaxe est préférable)
+        // l'incrémentation se fait après le premier passage dans la boucle
+        alert('i contient la valeur:' + i);  // l'instruction
+    }
+</script>
+</body>
+</html>

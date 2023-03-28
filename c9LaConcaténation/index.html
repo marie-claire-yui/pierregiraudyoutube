@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concaténation</title>
+</head>
+<body>
+    <h1>Concaténation</h1>
+    <p>mettre bout à bout deux chaines de caractères afin d'en faire une troisième nouvelle</p>
+<p>concaténer c'est additionner deux chaines de caractères</p>
+
+<script>
+    // concaténation de variables
+    var prenom = 'Pierre', espace = ' ' , nom = "Giraud";
+    var moi = prenom + espace + nom; // Pierre Giraud
+
+    // concaténation de valeurs
+    var toi = 'Victor' + ' ' + 'Durand'; // Victor Durand
+    var you = 'Victor Durand'; // équivalent Victor Durand
+
+    // concaténation de variables et de valeurs
+    var sport = 'courir';
+    var hobbie = "J'aime " + sport;  // J'aime courir
+
+    alert("Contenu de la variable moi: " + moi + 
+    "\nContenu de la variable toi : " + toi +
+    "\nContenu de la variable hobbie : " + hobbie);
+
+    // addition de nombre et de chaines de caractères
+    // tout ce qu'il ya derrière une chaine de caractère sera considéré comme une chaine de caractère tout sera concaténer mais pas additionner
+    var x = 4 + 2 + "1"; // 61 string
+    var y = "1" + 2 + 4; // 124 string
+    var z = 2 + "un" + 4; // 2un4 string
+
+    alert("Variable x : " + x + typeof(x) +
+    "\nVariable y: " + y + typeof(y) +
+    "\nVariable z : " + z + typeof(z));
+</script>
+</body>
+</html>

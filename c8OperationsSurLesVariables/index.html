@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les variables en Javascript</title>
+</head>
+<body>
+    <h1>Les variables en Javascript</h1>
+    <script>
+        var x = 5, y = 10, z= -2;
+
+        // addition et soustraction
+        x = x + 1;
+        x = x - 2; //4
+
+        // multiplication et division
+        y = y * 2; //20
+
+        var mult = x * y; // 80
+        var divi = y / z ; // - 10
+        
+        // modulo le reste de la division entière
+        var mod = 13 % 3; // 1
+
+        alert("Variable mult: " + mult +
+        "\nVariable divi : " + divi +
+        "\nVariable mod : " + mod);
+        
+        // priorité de calcul , les mêmes qu'en mathématiques
+        // () prioritaire sur toutes opérations
+        // * / et % et + et -
+        var a = 5, b = 10, c= -2;
+        var priorite = a + b / (4 + c) % 3; //7
+        alert(priorite);
+
+        // opérations simplifié
+        var a = 5, b = 10, c = -2;
+        a +=2 ; // équivalent à a = a + 2;
+        a -=3 ; //a = a - 3;
+        b *= a; //b = b * a;
+        b /= 2; // b = b / 2;
+        b %= a; // b = b  % x;
+        alert(a); //4
+
+        
+
+
+
+    </script>
+</body>
+</html>

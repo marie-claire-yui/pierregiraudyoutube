@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var heure = 18;
+
+        if (heure > 12){ // écriture équivalente à (heure > 12 == TRUE)
+            alert("il est midi passé");
+        }     
+        
+        if (!heure < 12){ // écriture équivalente à (heure < 12 == FALSE)
+            alert("il est midi passé");
+        }
+
+
+        // l'évaluation des valeurs
+        // une valeur peut être évalué à TRUE ou FAlSE même sans opérateurs de compaison
+        // toute valeur autre que null undefined et NaN "" et 0 sera évaluée à TRUE 
+
+        var x = 6, y ="";
+
+        if(x){ // eq ) x == true
+            alert("x est évaluée à true par le Javascript"); // true
+        }
+        if(y){ // eq )  == true
+            alert("y est évaluée à true par le Javascript");
+        } 
+        else{
+            alert("y est évalué à false par le javascript"); // false car y = "" chaine de caractère vide
+        }       
+
+    </script>
+    <!-- lorsqu'on écrit une condition, le JS va par défaut éxécuter l'instruction contenu dans un if ou dans un else if
+    si la comparaison est évalué à TRUE. Il est donc inutile de préciser le == TRUE dans nos conditions -->
+</body>
+</html>

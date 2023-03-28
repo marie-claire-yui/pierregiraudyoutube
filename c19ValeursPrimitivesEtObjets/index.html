@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Les objets en javascript</h1>
+    <script>
+        var primitive = "Je suis une valeur primitive";
+        var type_prim = typeof(primitive);
+
+        var chaine = new String("Je suis un objet"); // variable qui stocke un objet de type string   
+// Nous utilisons la fonction constructeur de string de l'objet string pour construire un objet de type string
+        var type_chai = typeof(chaine);
+
+        alert('Type de primitive:' + type_prim + // string (les valeurs primitives sont des simplifications introduites dans le JS poru le simplifier et l'alleger)
+                '\nType de chaine: ' + type_chai); // object (de type string)
+// les valeurs primitives sont à utiliser en priorité par rapport à créer un objet
+// car consomme moins de ressources, + flexibles, + lisibles
+  // elles sont traités comme des objets, donc on pourra utiliser des propriétés et des méthodes d'un type d'objet sur ces variables primitives  
+
+        var longueur_prim = primitive.length; // renvoit la taille de la chaine de caractère "je suis une valeur primitive"
+        var maj_prim = primitive.toUpperCase(); // renvoit la chaine de caractère en majuscule
+        var maj_chai = chaine.toUpperCase();
+        alert('Longueur de primitive: ' + longueur_prim +
+        '\nPrimitive en majuscules: ' + maj_prim + 
+        '\nChaine en mauscules: ' + maj_chai);
+        // la propriété length et la méthode toUpperCase() fonctionnent aussi bien sur des valeurs primitives de types string que sur des objets de type string
+
+        // syntaxe pour accéder aux propriétés et aux méthodes d'un objets nomDeLaVariableCiblée" . "nomDeLaPropriété ou  nomDeLaMéthode()
+        
+        // on peut comparer des valeurs primitives entres elles
+        // mais on ne peut pas comparer des objets entre eux
+
+    </script>
+</body>
+</html>
