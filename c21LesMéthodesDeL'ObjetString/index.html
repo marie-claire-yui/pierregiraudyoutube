@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les méthodes de l'objet string</title>
+</head>
+<body>
+    <h1>Les méthodes de l'objet string</h1>
+</body>
+<script>
+    var texte = "J'apprends le JAVASCRIPT"; // valeur primitive
+
+    // méthodes toLowerCase() et to UpperCase de l'objet string
+    var texteMin = texte.toLowerCase(); // tout en minuscule
+    var texteMaj = texte.toUpperCase(); // tout en majuscule
+
+    // méthode charAt() de l'objet string retourne le charactère situé à une position donnée en commençant par 0
+    alert('Texte de base: ' + texte +
+    '\nTexte en minuscules: ' + texteMin +
+    '\nTexte en majuscules: ' + texteMaj);
+    var pos0 = texte.charAt(0); // J
+    var pos3 = texte.charAt(3); // p
+    var pos11 = texte.charAt(11); // l
+
+    alert("Position 0: " + pos0 + 
+    "\n Position 3: " + pos3 +
+    "\n Position 11: " + pos11);
+
+    // méthode indexof() première occurence du caractère ou d'une séquence de caractère retrouvé dans une chaine
+    var premiere = texte.indexOf('p');
+    var sequence = texte.indexOf('le');
+    // méthode lastindexof() dernière occurence du caractère ou d'une séquence de caractère retrouvé dans une chaine
+    var derniere = texte.lastIndexOf('p');
+    var derniere2 = texte.lastIndexOf('prout');
+
+    alert(" Premier p trouvé en position: " + premiere + //3
+    "\n premier le trouvé en position: " +sequence + //11
+     "\n derniere p trouvé en position: " + derniere + //4
+     "\n derniere prout trouvé en position: " + derniere2); //-1 quand ne trouve pas de résultat
+
+        // on peut compter à partir du début mais rechercher à partir d'une certaine position
+         var premieres = texte.indexOf('J',1); //14
+        alert("premier J trouvé en position: " + premieres + " à partir du début de la chaine de caractère");
+    
+    // méthode replace() permet de rechercher un caractère ou une expression/séquence dans une chaine et de la remplacer par une autre
+    alert(texte.replace("JAVASCRIPT","PHP")); // j'apprends le PHP
+
+    // méthode slice() extraire une partie d'une chaine et retourner la partie extraite comme nouvelle chaine
+    alert(texte.slice(0,10)); // J'apprends
+    alert(texte.slice(-11,-1)); // JAVASCRIP
+
+    // méthode trim() enlève les espaces de début et de fin
+        var texte2 = "                        J'apprends le JAVASCRIPT      ";
+        alert(texte2.trim()); // J'apprends le JAVASCRIPT
+
+    // il existe d'autres méthodes de string intéressantes que l'on verra plus tard
+    // méthode valueOf() retourne la valeur primitive d'un objet de type string
+    // méthode search() match()
+    // méthode split()
+
+
+
+</script>
+</html>

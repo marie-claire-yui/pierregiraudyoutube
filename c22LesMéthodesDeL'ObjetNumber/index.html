@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les méthodes de l'objet number</title>
+</head>
+<body>
+    <h1>Les méthodes de l'objet number</h1>
+    <script>
+        // 5 propriétés de l'objet number
+        var min = Number.MIN_VALUE;
+        var max = Number.MAX_VALUE;
+        var infneg = Number.NEGATIVE_INFINITY;
+        var infpos = Number.POSITIVE_INFINITY;
+        var notnumber = Number.NaN;
+
+        alert("min : " + min + // min : 5e-324
+        "\nmax: " + max +      // max: 1.7976931348623157e+308
+        "\ninfnef:" + infneg + // infnef:-Infinity
+        "\ninfpos:" + infpos + // infpos:Infinity
+        "\nnotnumber:" + notnumber); //notnumber:NaN
+
+        // 5 méthodes de l'objet number
+        // la méthode toString() de l'objet number
+        var x = 10;
+        var t = x.toString(); // transforme un number en str
+
+        alert('type de x:' + typeof(x) + // number
+        '\nType t: ' + typeof(t));   // string
+
+        // la méthode toFixed() transforme valeur de type number en type string et arrondi
+        var y = 10.4531;
+        var d = y.toFixed(2); //10,45
+
+        // la méthode toPrecision() choisi la taille du nombre (nombre de chiffre que l'on souhaite renvoyé pour le nombre) + transformation en type
+        var e = y.toPrecision(5); // 10,453
+  
+        // la méthode toExponential prend en paramètre le nombre de décimal souhaité donne l'exponentiel
+        var f = y.toExponential(2); //1.05e+1
+
+        // la méthode number() convertit des variables en nombre 
+        var tr = true;
+        var fa = false;
+        var da = new Date();
+
+        alert("true: " + Number(tr) + //1 les valeurs de types binaire vont etre converti en binaire
+        "\nFalse: " + Number(fa) +  // 0
+        "\nDate: "+ Number(da)); // 1680028808222 valeur date convertit en timestamp d'où la valeur retournée très grande
+
+        // méthode parseInt() retourne un nombre entier à partir d'une chaine de caractère 
+        // méthode parseFloat() retourne un nombre décimal à partr d'une chaine de caractère
+        var z ="10.4531";
+        var int = parseInt(z);//10  type number
+        var dec = parseFloat(z);//10.4531 type number
+
+    </script>
+</body>
+</html>
