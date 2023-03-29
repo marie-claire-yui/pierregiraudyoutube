@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Découverte de l'objet array</title>
+</head>
+<body>
+    <h1>Découverte de l'objet array</h1>
+    
+</body>
+<script>
+// type de variable pouvant contenir plusieurs valeurs
+//objet natif possédant ses propriétés et méthodes
+// index automatiquement crée, ce sont les clés
+// association automatique d'un clé à une valeur de façon automatique
+
+// syntaxe d'un tableau new Array déconseillé
+
+//autre syntaxe, création d'un tableau
+var prenoms = ['Pierre','Victor','Julia','Claire'];
+alert(prenoms[0]); // alert première valeure du tableau : Pierre
+alert(prenoms[2]); // Julia
+
+//modifier une valeur dans un tableau
+prenoms[0] = 'Paul'; // on modifie la valeur de la clé 0 du tableau prenoms
+
+// propriété length: nombre d'éléments contenu dans le tableau
+alert(prenoms.length); //4 éléments dans le tableau
+
+// ajouter un élément en fin de tableau
+prenoms[prenoms.length] = 'Florian'; // ajoute Florian en fin de tableau
+
+// parcourir un tableau et afficher toutes ses valeurs
+p=''; //initalisation de la variable p
+for (let i = 0 ; i< prenoms.length; i ++){
+    p+= 'Prénom n°' + (i+1) + ' : ' + prenoms[i] + '\n'; 
+}
+alert(p);
+
+
+
+
+
+
+
+
+// tableau associatif n'existe pas, utilisation d'objet littéral (pas objet de type array donc méthode pour array ne fonctionne pas)
+
+var prenom = {
+    prenom1 : 'Pierre',
+    prenom2 :'Victor',
+    prenom3 : 'Julia',
+    prenom4: 'Claire'
+}, q ='';
+alert(prenom.prenom1); // Pierre
+
+// boucle for in (afficher les valeurs d'un objet littéral)
+// on va stocker dans q la valeur relative au prénom1 au premier passage etc
+// clé  va être remplacé par prénom 1 etc
+for (var clefs in prenom){
+    q+= clefs + ' : ' + prenom[clefs] + '\n'; 
+}
+alert(q);
+// prenom1 : Pierre
+// prenom2 : Victor
+// prenom3 : Julia
+// prenom4 : Claire
+
+
+
+</script>
+</html>
