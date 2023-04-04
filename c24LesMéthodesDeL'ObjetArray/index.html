@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+    var prenoms = ["Pierre","Victor","Julia","Claire"];
+    var p = "";
+    
+    // méthode push()
+    var taille = prenoms.push('Florian','Chloé'); // on ajoute Florian et Chloé et renvoit la taille du tableau après ajout
+    for(var i = 0 ; i<prenoms.length; i++){
+        p+= 'Prénom n°' + (i+1) + ' : ' + prenoms[i] + '\n';
+    }
+    alert('Le tableau contient' + taille + ' éléments : \n\n' + p);
+    
+    // méthode pop()
+    var suppr = prenoms.pop(); // Suppression du dernier élément du tableau et renvoit le dernier élément du tableau, celui qui a été supprimé
+    for(var i = 0 ; i<prenoms.length; i++){
+        p+= 'Prénom n°' + (i+1) + ' : ' + prenoms[i] + '\n';
+    }
+    alert(p + ' \n\nNous avons supprimé ' + suppr + ' du tableau'); 
+
+    //méthode unshift()
+    var taille = prenoms.unshift("Florianne","Claude"); // on ajoute au début du tableau les prénoms Florianne et claude et on renvoit la taille du tableau après l'ajout
+    for(var i = 0 ; i<prenoms.length; i++){
+        p+= 'Prénom n°' + (i+1) + ' : ' + prenoms[i] + '\n';
+    }
+    alert('Notre tableau contient' + taille + ' prénoms : \n\n' + p);
+
+    // méthode shift()
+    var taille = prenoms.shift(); // on supprime au début du tableau un prénom et on renvoit la valeur de l'élément supprimé
+    for(var i = 0 ; i<prenoms.length; i++){
+        p+= 'Prénom n°' + (i+1) + ' : ' + prenoms[i] + '\n';
+    }
+    alert(p + ' \n\nNous avons supprimé ' + suppr + ' du tableau'); 
+
+    // méthode splice() pour ajouter
+    prenoms.splice(1,0,"Shinichi","Yuka"); // à partir de avant l'index 1, on supprime 0 élément, et on rajoute à partir d'avant l'index1 Shinichi et Yuka
+    for(var i = 0 ; i<prenoms.length; i++){
+        p+= 'Prénom n°' + (i+1) + ' : ' + prenoms[i] + '\n';
+    }
+    alert('Notre tableau contient' + taille + ' prénoms : \n\n' + p);
+
+    // méthode splice() pour supprimer
+    prenoms.splice(1,3) // supression à partir de l'index 1, de 3 éléments
+
+    alert('Nouveau tableau :\n\n' + p);
+
+    // méthode sort();
+    prenoms.sort(); // classe les éléments du tableau par ordre alphabétique de leur valeur en tenant compte de la casse (Majuscule avant minuscule)
+    for(var i = 0 ; i<prenoms.length; i++){ 
+        p+= 'Prénom n°' + (i+1) + ' : ' + prenoms[i] + '\n';
+    }
+    alert('Nouveau tableau :\n\n' + p);
+
+    // méthode reverse();
+    prenoms.sort();
+    prenoms.reverse(); // inverse l'ordre des éléments d'un tableau
+    for(var i = 0 ; i<prenoms.length; i++){ 
+        p+= 'Prénom n°' + (i+1) + ' : ' + prenoms[i] + '\n';
+    }
+    alert('Nouveau tableau :\n\n' + p);
+
+    // méthode join()
+    // rq: ne change pas le tableau, prend en argument le séparateur
+    var chaine  = prenoms.join('/'); // renvoit els différentes valeurs du tableau sous forme de chaine de caractère avec un séparateur choisi
+    for(var i = 0 ; i<prenoms.length; i++){ 
+        p+= 'Prénom n°' + (i+1) + ' : ' + prenoms[i] + '\n';
+    }
+    alert('n\nLa chaine renvoyée par la méthode join():' + chaine)
+
+    // méthode slice()
+    // rq: n'impacte pas le tableau de  départ
+    var garçons = prenoms.slice(2,5) // extrait de la position de départ 2 à la position de fin 5 et renvoit la partie extraite dans un autre tableau créé
+    for(var i = 0 ; i<prenoms.length; i++){ 
+        p+= 'Prénom n°' + (i+1) + ' : ' + prenoms[i] + '\n';
+    }
+    alert('Le tableau créé par slice():' + garçons);
+
+    // méthode concat()
+    var tableau1 = ["ichi","ni","san"];
+    var tableau2 = ["un","deux","trois"];
+    var newArray = tableau1.concat(tableau2); // fusion des deux tableaux et création d'un autre tableau newArray sans modifier les valeurs du tableau1 et tableau 2
+    alert(newArray); // renvoit ichi ni san un deux trois
+
+
+    var tableau3 = ["un","dos","tres"]
+    var newArray2 = tableau1.concat(tableau2,tableau3); // fusion des deux tableaux et création d'un autre tableau newArray sans modifier les valeurs du tableau1 et tableau 2
+    alert(newArray2);// renvoit ichi ni san un deux trois un dos tres
+
+</script> 
+</html>
